@@ -13,18 +13,13 @@ class SearchController extends Controller
 
     public function search(Request $request)
     {
+        $params = [
+            'q' => $request->search,
+            'maxResults' => 12
+        ];
 
-        if ($request->ajax()) {
-            $params = [
-                'q' => $request->search,
-                'type' => 'video',
-                'part' => 'snippet',
-                'maxResults' => 12
-            ];
-            
-            $search = \Youtube::searchAdvanced($params);
-            
-            return view('search')->withStore($search); ;
-        }
+        $search = \Youtubeapi::searchVideos($params);
+
+        return view('search')->withStore($search);
     }
 }

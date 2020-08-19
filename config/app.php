@@ -142,6 +142,7 @@ return [
          * Package Service Providers...
          */
         App\Providers\YoutubeServiceProvider::class,
+        App\Providers\YoutubeapiServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -199,5 +200,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Youtube' => App\Facades\Youtube::class,
+        'Youtubeapi' => App\Facades\Youtubeapi::class,
     ],
 ];
