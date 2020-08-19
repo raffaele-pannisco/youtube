@@ -17,9 +17,11 @@ class SearchController extends Controller
             'q' => $request->search,
             'maxResults' => 12
         ];
+        
+        if ($request->ajax()) {
+            $search = \Youtubeapi::searchVideos($params);
 
-        $search = \Youtubeapi::searchVideos($params);
-
-        return view('search')->withStore($search);
+            return view('search')->withStore($search);
+        }
     }
 }
