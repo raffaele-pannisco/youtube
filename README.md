@@ -11,7 +11,7 @@ The Youtube api integration is based on my google account, if you want to use yo
 In order to test the search please go to the root page and edit the search form, the ajax is triggered everytime a char has been added to the input form. 
 the form and the result page will  be updated accordingly.
 
-The page is entirely responsive and suitable for mobile/table use.
+The page is entirely responsive and suitable for mobile/tablet use.
 
 In order to complete the project a controller, serviceprovider, facade and routing has been implemented
 
